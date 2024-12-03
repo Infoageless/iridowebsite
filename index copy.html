@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Irido.in</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+img {
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+/* ============ Full Page Slider ================= */
+.creative-fullpage--slider{
+	background-color: #ffffff;
+	z-index: 2;
+	width: 100%;
+	position: relative;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 16px;
+	display: flex;
+	clip-path: none !important;
+}
+.creative-fullpage--slider .slider-inner {
+	background: #000;
+	height: 100vh;
+	position: relative;
+}
+.creative-fullpage--slider .swiper-slide {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	text-align: left;
+	flex-direction: column;
+	overflow: hidden;
+}
+.creative-fullpage--slider .swiper-slide .slider-inner img 
+{
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+}
+.creative-fullpage--slider .swiper-slide .slider-inner video {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.creative-fullpage--slider .swiper-slide .slider-inner .swiper-content {
+	position: absolute;
+	top: 22%;
+	left: 50px;
+	z-index: 1;
+}
+.creative-fullpage--slider .swiper-slide .slider-inner::after {
+	content: "";
+	position: absolute;
+	width: 101%;
+	height: 100%;
+	top: 0;
+	left: -1px;
+	background-color: transparent;
+	background-image: radial-gradient(at center right, #FFFFFF00 50%, #00000096 100%);
+}
+.swiper-slide .slider-inner .swiper-content .title-area .tag {
+	color: #ffffff;
+	font-weight: 900;
+	font-size: 24px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+.swiper-slide .slider-inner .swiper-content .title-area .title {
+	margin-top: 50px;
+	color: #fff;
+	font-size: 8vw;
+	font-family: "Inter", sans-serif;
+	font-weight: 900;
+	line-height: 1.1;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	margin-left: -12px;
+	text-decoration: none;
+}
+.swiper-slide .slider-inner .swiper-content p.disc {
+	font-size: 20px;
+	width: 100%;
+	margin-top: 15px;
+	margin: 20px 0px 40px 0px;
+	font-weight: 400;
+	line-height: 32px;
+	color: #FFFFFFB0;
+}
+.creative-btn--wrap .creative-slide--btn {
+	color: #ffffff;
+	margin-left: 18px;
+	font-size: 1.4em;
+	transition: margin-left 300ms cubic-bezier(0.49, 0, 0.01, 1);
+	font-weight: 400;
+	display: inline-flex;
+	position: relative;
+	white-space: nowrap;
+	text-decoration: none;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+	outline-color: transparent;
+	box-shadow: none;
+	will-change: transform;
+	backface-visibility: hidden;
+}
+
+.creative-btn--circle .circle {
+	position: absolute;
+	right: calc(100% - 10px);
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	clip-path: circle(25% at 50% 50%);
+	transition: clip-path 500ms cubic-bezier(0.49, 0, 0.01, 1);
+}
+.creative-btn--circle .circle .circle-fill {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 100%;
+	background-color: #ffffff;
+	will-change: transform;
+	transform: scale(0);
+	z-index: 1;
+	transition: transform 500ms cubic-bezier(0.49, 0, 0.01, 1), background-color 500ms cubic-bezier(0.49, 0, 0.01, 1);
+}
+.creative-btn--circle .circle-icon {
+	transform: translate(-100%, 0%);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	z-index: 2;
+	transition: all 500ms cubic-bezier(0.49, 0, 0.01, 1);
+}
+.creative-btn--circle .circle-icon .icon-arrow{
+	width: 20px;
+	height: 20px;
+	stroke: none;
+	fill: #000;
+}
+.creative-btn--circle .circle-outline {
+	fill: transparent;
+	width: 10px;
+	stroke: #ffffff;
+}
+.creative-btn--wrap .creative-slide--btn .creative-btn--label {
+	margin-left: 4pt;
+	transition: transform 500ms cubic-bezier(0.49, 0, 0.01, 1);
+}
+.creative-btn--wrap .creative-slide--btn .creative-btn__border {
+	position: absolute;
+	left: 4pt;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background: currentColor;
+	transform-origin: right;
+	transition: transform 500ms cubic-bezier(0.49, 0, 0.01, 1);
+}
+.creative-btn--wrap .creative-slide--btn:hover .creative-btn--label {
+	transform: translateX(18px);
+}
+.creative-btn--wrap .creative-slide--btn:hover .creative-btn__border {
+	transform: scale(0, 1);
+}
+.creative-btn--wrap .creative-slide--btn:hover{
+	margin-left: 38px !important;
+}
+.creative-btn--wrap .creative-slide--btn:hover .circle {
+	clip-path: circle(50% at 50% 50%);
+}
+.creative-btn--wrap .creative-slide--btn:hover .circle-fill {
+	transform: scale(1, 1);
+}
+.creative-btn--wrap .creative-slide--btn:hover .circle-icon {
+	transform: translate(0%, 0%);
+	opacity: 1;
+}
+.creative-fullpage--slider .swiper-container-h .swiper-button-next, 
+.creative-fullpage--slider .swiper-container-h .swiper-button-prev {
+	bottom: 5%;
+	top: unset;
+	transform: scale(1);
+	transition: all 0.4s;
+	background-color: #FFFFFF00;
+	backdrop-filter: blur(20px);
+	height: 85px;
+	width: 85px;
+	line-height: 85px;
+	border-radius: 50%;
+	transition: all 0.4s;
+}
+.creative-fullpage--slider .swiper-container-h .swiper-button-next {
+	right: 50px;
+}
+.creative-fullpage--slider .swiper-container-h .swiper-button-prev {
+	left: 50px;
+}
+.swiper-container-h .slider-pagination-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: unset;
+	right: unset;
+	bottom: 80px;
+	left: 50% !important;
+	transform: translateX(-50%);
+	width: 500px;
+	z-index: 1;
+}
+.swiper-container-h .slider-pagination-area .slide-range {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0 15px;
+	color: #ffffff;
+	line-height: 0;
+	position: absolute;
+	font-size: 20px;
+}
+.swiper-container-h .slider-pagination-area .slide-range.one {
+	left: -50px;
+}
+.swiper-container-h .slider-pagination-area .slide-range.three {
+	right: -50px;
+}
+.swiper-container-h .slider-pagination-area .swiper-pagination {
+	bottom: 0 !important;
+	width: 500px !important;
+}
+.swiper-container-h .slider-pagination-area .swiper-pagination .swiper-pagination-progressbar-fill {
+	background: #ffffff;
+}
+.swiper-container-h .swiper-button-next::after {
+	content: "\f061";
+	font-family: var(--fa-style-family, "Font Awesome 6 Free");
+	font-weight: var(--fa-style, 900);
+	background: none;
+	color: #ffffff;
+	font-size: 60px;
+}
+.swiper-container-h .swiper-button-prev::after {
+	content:"\f060";
+	font-family: var(--fa-style-family, "Font Awesome 6 Free");
+	font-weight: var(--fa-style, 900);
+	background: none;
+	color: #ffffff;
+	font-size: 60px;
+}
+.swiper-container-h .swiper-button-next:hover, 
+.swiper-container-h .swiper-button-prev:hover {
+	background: #FFFFFF0D;
+}
+
+
+/* ====================== Responsive Ipad =============================== */
+@media (max-width: 991px) {
+	.creative-fullpage--slider .swiper-slide .slider-inner .swiper-content{
+		width: 100%;
+		text-align: center;
+		left: 0;
+	}
+	.creative-fullpage--slider .swiper-container-h .swiper-button-next, 
+	.creative-fullpage--slider .swiper-container-h .swiper-button-prev {
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+	}
+	.swiper-container-h .slider-pagination-area{
+		width: 200px !important;
+	}
+	.swiper-container-h .swiper-button-next::after, 
+	.swiper-container-h .swiper-button-prev::after {
+		font-size: 30px;
+	}
+	.creative-fullpage--slider .swiper-container-h .swiper-button-next, 
+	.creative-fullpage--slider .swiper-container-h .swiper-button-prev{
+		background: #ffffff3b;
+	}
+	.swiper-container-h .slider-pagination-area .swiper-pagination {
+		bottom: 0 !important;
+		width: 200px !important;
+	}
+}
+
+/* ====================== Responsive Iphone =============================== */
+@media screen and (max-width: 767px) {
+	.swiper-slide .slider-inner .swiper-content .title-area .title {
+		font-size: 64px;
+	}
+	.swiper-slide .slider-inner .swiper-content .title-area .tag{
+		margin-bottom: 0px;
+	}
+	.swiper-slide .slider-inner .swiper-content p.disc{
+		    margin: 20px auto 20px auto;
+    font-size: 16px;
+    width:95%;
+	}
+	.swiper-container-h .slider-pagination-area{
+		display: none;
+	}
+	.swiper-slide .slider-inner .swiper-content p.disc br{
+		display: none;
+	}
+}
+    </style>
+
+    <body>
+       
+        <!-- Navbar start -->
+        <div class="container-fluid">
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Logo" style="max-width: 80%; margin-left: -100px;">
+                      </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="shop.html" class="nav-item nav-link">Products</a>
+                            <a href="#" class="nav-item nav-link">About</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex m-3 me-0">
+                            <!-- <button class="btn-search btn borderborder-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fas fa-search text-primary"></i>
+                        </button> -->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-Rope Riders-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+        <!-- Hero Start -->
+        <section class="creative-fullpage--slider">
+            <div class="banner-horizental">
+                <div class="swiper swiper-container-h">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner" data-swiper-parallax="100">
+                                <img src="https://img.freepik.com/free-photo/ropejumper-silhouette_1385-611.jpg?ga=GA1.1.1917718246.1731559597&semt=ais_hybrid" alt="full_screen-image">
+                                <div class="swiper-content" data-swiper-parallax="2000">
+                                    <div class="title-area">
+                                        <!-- title-area -->
+                                        <p class="tag">OUR VISION</p>
+                                        <a href="#" class="title"> DESIGN </a>
+                                        <!-- title area -->
+                                    </div>
+                                    <p class="disc">
+                                        Credibly leverage existing business experiences through
+                                        <br>
+                                        magnetic mindshare. Synergistically exploit
+                                        <br>
+                                        efficient partnerships world-class applications.
+                                    </p>
+                                    <div class="creative-btn--wrap">
+                                        <a class="creative-slide--btn" role="button" href="#0">
+                                            <div class="creative-btn--circle">
+                                                <div class="circle">
+                                                    <div class="circle-fill"></div>
+                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="circle-outline">
+                                                        <circle cx="25" cy="25" r="23"></circle>
+                                                    </svg>
+                                                    <div class="circle-icon">
+                                                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                            <path d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="creative-btn--label">
+                                                <div class="creative-btn__text">Take A Look</div>
+                                                <div class="creative-btn__border"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="slider-inner" data-swiper-parallax="100">
+                                <img src="https://imgpanda.com/upload/ib/WyIYCNuacs.jpeg" alt="full_screen-image">
+                                <div class="swiper-content" data-swiper-parallax="2000">
+                                    <div class="title-area">
+                                        <!-- title-area -->
+                                        <p class="tag">INSPIRATION</p>
+                                        <a href="#" class="title"> MOTION </a>
+                                        <!-- title area -->
+                                    </div>
+                                    <p class="disc">
+                                        Conveniently formulate progressive users for error-free
+                                        <br>
+                                        interfaces. Monotonectally deploy superior
+                                        <br>
+                                        relationships without seamless infomediaries.
+                                    </p>
+                                    <div class="creative-btn--wrap">
+                                        <a class="creative-slide--btn" role="button" href="#0">
+                                            <div class="creative-btn--circle">
+                                                <div class="circle">
+                                                    <div class="circle-fill"></div>
+                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="circle-outline">
+                                                        <circle cx="25" cy="25" r="23"></circle>
+                                                    </svg>
+                                                    <div class="circle-icon">
+                                                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                            <path d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="creative-btn--label">
+                                                <div class="creative-btn__text">See More</div>
+                                                <div class="creative-btn__border"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="slider-inner" data-swiper-parallax="100">
+                                <video autoplay="" loop="" muted="">
+                                    <source src="https://html.themewant.com/most/assets/images/slider/video.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="swiper-content" data-swiper-parallax="2000">
+                                        <div class="title-area">
+                                            <!-- title-area -->
+                                            <a href="#" class="title"> ENGINE </a>
+                                            <!-- title area -->
+                                        </div>
+                                        <p class="disc">
+                                            Conveniently formulate progressive users for error-free
+                                            <br>
+                                            interfaces. Monotonectally deploy superior
+                                            <br>
+                                            relationships without seamless infomediaries.
+                                        </p>
+                                        <div class="creative-btn--wrap">
+                                        <a class="creative-slide--btn" role="button" href="#0">
+                                            <div class="creative-btn--circle">
+                                                <div class="circle">
+                                                    <div class="circle-fill"></div>
+                                                    <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="circle-outline">
+                                                        <circle cx="25" cy="25" r="23"></circle>
+                                                    </svg>
+                                                    <div class="circle-icon">
+                                                        <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow">
+                                                            <path d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="creative-btn--label">
+                                                <div class="creative-btn__text">Take A Look</div>
+                                                <div class="creative-btn__border"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-wrapper creative-button--wrapper">
+                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide">
+                            </div>
+                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide">
+                            </div>
+                        </div>
+                        <div class="slider-pagination-area">
+                            <h5 class="slide-range one">01</h5>
+                            <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"><span class="swiper-pagination-progressbar-fill" style="transform: translate3d(0px, 0px, 0px) scaleX(0.666667) scaleY(1); transition-duration: 1500ms;"></span></div>
+                            <h5 class="slide-range three">03</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- Hero End -->
+
+        <!-- Featurs Section Start -->
+        <!-- <div class="container-fluid featurs py-5">
+                <div class="container py-5">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="featurs-item text-center rounded bg-light p-4">
+                                <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                    <i class="fas fa-car-side fa-3x text-white"></i>
+                                </div>
+                                <div class="featurs-content text-center">
+                                    <h5>Free Shipping</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="featurs-item text-center rounded bg-light p-4">
+                                <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                    <i class="fas fa-user-shield fa-3x text-white"></i>
+                                </div>
+                                <div class="featurs-content text-center">
+                                    <h5>Security Payment</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="featurs-item text-center rounded bg-light p-4">
+                                <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                    <i class="fas fa-exchange-alt fa-3x text-white"></i>
+                                </div>
+                                <div class="featurs-content text-center">
+                                    <h5> Onsite Assistance</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="featurs-item text-center rounded bg-light p-4">
+                                <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                    <i class="fa fa-phone-alt fa-3x text-white"></i>
+                                </div>
+                                <div class="featurs-content text-center">
+                                    <h5>24/7 Support</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <!-- Featurs Section End -->
+
+        <!-- Featurs Section Start -->
+        <div class="container-fluid featurs py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Free Shipping</h5>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-user-shield fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Security Payment</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Company Initialization </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fa fa-phone-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>24/7 Support</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featurs Section End -->
+        <div class="container-fluid fruite py-5">
+            <div class="container py-5">
+                <div class="tab-class text-center">
+                    <div class="row g-4">
+                        <div class="col-lg-4 text-start">
+                            <h1>Our Products</h1>
+                        </div>
+                        <div class="col-lg-8 text-end">
+                            <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                                        <span class="text-dark" style="width: 130px;">All Products</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                                        <span class="text-dark" style="width: 130px;">Cars</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                                        <span class="text-dark" style="width: 130px;">Rope Riders</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
+                                        <span class="text-dark" style="width: 130px;">Boats</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
+                                        <span class="text-dark" style="width: 130px;">Spare Parts</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Cars</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div  style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap ">
+                                                        <a href="" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Cars</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                      <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Boats</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                        <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Spare</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Rope Rides</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                     <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Rope Riders</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                     <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Boats</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                     <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Cars</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                     <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Cars</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Boats</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Rope Riders</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                        <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apple</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                     <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Cars</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                    <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Spare</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                     <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Rope Rides</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                      <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Boats</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                      <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">New</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Rope Riders</h4>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                      <div style="margin-left: 54px;" class="d-flex justify-content-between flex-lg-wrap">
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fab fa-whatsapp me-2 text-primary"></i></i> Get Enquiry</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                    
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Why People Like us!</h4>
+                            <p class="mb-4">typesetting, remaining essentially unchanged. It was 
+                                popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Shop Info</h4>
+                            <a class="btn-link" href="">About Us</a>
+                            <a class="btn-link" href="">Contact Us</a>
+                            <a class="btn-link" href="">Privacy Policy</a>
+                            <a class="btn-link" href="">Terms & Condition</a>
+                            <a class="btn-link" href="">Return Policy</a>
+                            <a class="btn-link" href="">FAQs & Help</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Account</h4>
+                            <a class="btn-link" href="">My Account</a>
+                            <a class="btn-link" href="">Shop details</a>
+                            <a class="btn-link" href="">Shopping Cart</a>
+                            <a class="btn-link" href="">Wishlist</a>
+                            <a class="btn-link" href="">Order History</a>
+                            <a class="btn-link" href="">International Orders</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>No:8 confident gem rajagirivalley kakkanad kochi</p>
+                            <p>Email: contact@irido.in</p>
+                            <p>Phone: +91 7025777755</p>
+                            <p>Payment Accepted</p>
+                            <img src="img/payment.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Irido.in</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+         
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function() {
+    var swiper = new Swiper(".swiper-container-h", {
+            direction: "horizontal",
+            effect: "slide",
+            autoplay: {
+            delay: 10000, 
+            disableOnInteraction: false
+        },
+            parallax: true,
+            speed: 1600,
+            rtl: true,
+            loop: true,
+            loopFillGroupWithBlank: !0,
+  
+            mousewheel: {
+              eventsTarged: ".swiper-slide",
+              sensitivity: 1
+            },
+            keyboard: {
+              enabled: true,
+              onlyInViewport: true
+            },
+            scrollbar: {
+              el: ".swiper-scrollbar",
+              hide: false,
+              draggable: true
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar"
+              }
+          });
+        var swiper = new Swiper(".swiper-container-h1", {
+            direction: "horizontal",
+            effect: "slide",
+            autoplay: false,
+            parallax: true,
+            speed: 1600,
+            rtl: true,
+            loop: true,
+            loopFillGroupWithBlank: !0,
+            keyboard: {
+              enabled: true,
+              onlyInViewport: true
+            },
+            scrollbar: {
+              el: ".swiper-scrollbar",
+              hide: false,
+              draggable: true
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets",
+                clickable:"true"
+              }
+          });
+});
+        </script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

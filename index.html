@@ -35,7 +35,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
         <style>
-            /* Style for WhatsApp icon */
+          
         #whatsapp-icon {
             position: fixed;
             bottom: 20px;
@@ -47,22 +47,10 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color: #ffffff; /* WhatsApp green color */
+            background-color: #ffffff; 
             padding: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-            .custom-carousel {
-                     
-            margin: 0 auto;     
-            overflow: hidden; 
-            }
-
-            .custom-carousel img {
-            object-fit: cover; 
-            height: 100%;
-            width: 100%;
-            }
         </style>
     <body>
         <!-- Spinner Start -->
@@ -117,34 +105,39 @@
         </div>
         <!-- Modal Search End -->
 
-        <!-- Slider Start -->
-        <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="https://www.rd.com/wp-content/uploads/2019/06/shutterstock_325891619.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://static.visitestonia.com/images/3511909/600_400_false_false_88978d58b79dd682a60e6d24ac02ed72.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://thumbs.dreamstime.com/b/boy-rides-racing-car-behind-wheel-sports-race-track-children-78432127.jpg" alt="Third slide">
-              </div>
+         <!-- Hero Start -->
+         <div class="container-fluid py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-12 col-lg-7">
+                        <h4 class="mb-3 text-secondary">Top Ev Cars.</h4>
+                        <h1 class="mb-5 display-3 text-primary">Sky,Road,Water Rides.Manufacturers in India.</h1>
+                    </div>
+                    <div class="col-md-12 col-lg-5">
+                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active rounded">
+                                    <img src="1st" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                </div>
+                                <div class="carousel-item rounded">
+                                    <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        <!-- Slider End -->
+        </div>
+        <!-- Hero End -->
+
 
         <!-- WhatsApp Floating Icon -->
             <a href="https://wa.me/+917025777755" target="_blank" id="whatsapp-icon">
@@ -617,5 +610,4 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
-
 </html>
